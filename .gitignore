@@ -274,7 +274,7 @@ redis_data/
 
 # Large data files
 *.csv
-*.json
+#*.json
 *.parquet
 *.h5
 *.hdf5
@@ -310,9 +310,3 @@ build/
 dist/
 out/
 target/
-
-# Package manager lock files (optional - uncomment if you want to ignore them)
-# package-lock.json
-# yarn.lock
-# poetry.lock
-# Pipfile.lock
