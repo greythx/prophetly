@@ -213,6 +213,7 @@ secrets.json
 # IDE and Editor files
 .vscode/
 .idea/
+.kilocode/
 *.swp
 *.swo
 *~
