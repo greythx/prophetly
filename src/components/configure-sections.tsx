@@ -66,7 +66,11 @@ export const ResetIndicator = memo(function ResetIndicator({
       onClick={onReset}
       className="size-5 rounded-full text-muted-foreground hover:text-primary hover:bg-muted/80 p-0"
     >
-      <RotateCcw aria-hidden="true" data-icon="inline-start" className="size-3" />
+      <RotateCcw
+        aria-hidden="true"
+        data-icon="inline-start"
+        className="size-3"
+      />
     </Button>
   );
 });
@@ -101,7 +105,10 @@ export const GrowthSeasonalitySection = memo(function GrowthSeasonalitySection({
             </FieldLabel>
             <Tooltip>
               <TooltipTrigger className="cursor-pointer">
-                <HelpCircle aria-hidden="true" className="size-3.5 text-muted-foreground" />
+                <HelpCircle
+                  aria-hidden="true"
+                  className="size-3.5 text-muted-foreground"
+                />
               </TooltipTrigger>
               <TooltipContent>
                 Linear for standard trend, Logistic for bounded growth.
@@ -120,7 +127,11 @@ export const GrowthSeasonalitySection = memo(function GrowthSeasonalitySection({
             onConfigChange({ growth: val as "linear" | "logistic" | "flat" })
           }
         >
-          <SelectTrigger id="growth" aria-label="Growth Model" className="h-9 text-xs">
+          <SelectTrigger
+            id="growth"
+            aria-label="Growth Model"
+            className="h-9 text-xs"
+          >
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -147,7 +158,10 @@ export const GrowthSeasonalitySection = memo(function GrowthSeasonalitySection({
             </FieldLabel>
             <Tooltip>
               <TooltipTrigger className="cursor-pointer">
-                <HelpCircle aria-hidden="true" className="size-3.5 text-muted-foreground" />
+                <HelpCircle
+                  aria-hidden="true"
+                  className="size-3.5 text-muted-foreground"
+                />
               </TooltipTrigger>
               <TooltipContent>
                 Additive (+) or Multiplicative (×) variations.
@@ -174,7 +188,11 @@ export const GrowthSeasonalitySection = memo(function GrowthSeasonalitySection({
             })
           }
         >
-          <SelectTrigger id="seasonality_mode" aria-label="Seasonality Mode" className="h-9 text-xs">
+          <SelectTrigger
+            id="seasonality_mode"
+            aria-label="Seasonality Mode"
+            className="h-9 text-xs"
+          >
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -220,7 +238,11 @@ export const GrowthSeasonalitySection = memo(function GrowthSeasonalitySection({
                 val && onForecastParamsChange({ freq: val })
               }
             >
-              <SelectTrigger id="freq" aria-label="Frequency" className="h-9 text-xs">
+              <SelectTrigger
+                id="freq"
+                aria-label="Frequency"
+                className="h-9 text-xs"
+              >
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -259,7 +281,11 @@ export const GrowthSeasonalitySection = memo(function GrowthSeasonalitySection({
             })
           }
         >
-          <SelectTrigger id="country_holidays" aria-label="Built-in Country Holidays" className="h-9 text-xs">
+          <SelectTrigger
+            id="country_holidays"
+            aria-label="Built-in Country Holidays"
+            className="h-9 text-xs"
+          >
             <SelectValue placeholder="Select country…" />
           </SelectTrigger>
           <SelectContent className="max-h-56">
@@ -351,7 +377,8 @@ export const CVSplitSection = memo(function CVSplitSection({
               Initial Training
             </Label>
             <span className="font-mono text-muted-foreground text-[11px] tabular-nums">
-              {cvSplit.initialLabel || cvSplit.initialStr} ({(cvSplit.initialPct * 100).toFixed(0)}%)
+              {cvSplit.initialLabel || cvSplit.initialStr} (
+              {(cvSplit.initialPct * 100).toFixed(0)}%)
             </span>
           </div>
           <Slider
@@ -370,7 +397,8 @@ export const CVSplitSection = memo(function CVSplitSection({
               Forecast Horizon
             </Label>
             <span className="font-mono text-muted-foreground text-[11px] tabular-nums">
-              {cvSplit.horizonLabel || cvSplit.horizonStr} ({(cvSplit.horizonPct * 100).toFixed(0)}%)
+              {cvSplit.horizonLabel || cvSplit.horizonStr} (
+              {(cvSplit.horizonPct * 100).toFixed(0)}%)
             </span>
           </div>
           <Slider
@@ -389,7 +417,8 @@ export const CVSplitSection = memo(function CVSplitSection({
               Cutoff Step Period
             </Label>
             <span className="font-mono text-muted-foreground text-[11px] tabular-nums">
-              {cvSplit.periodLabel || cvSplit.periodStr} ({(cvSplit.periodPct * 100).toFixed(0)}%)
+              {cvSplit.periodLabel || cvSplit.periodStr} (
+              {(cvSplit.periodPct * 100).toFixed(0)}%)
             </span>
           </div>
           <Slider

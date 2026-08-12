@@ -46,7 +46,13 @@ export function CVConfigDialog({
 
   const handleInitialChange = (val: number | readonly number[]) => {
     const targetInit = Array.isArray(val) ? val[0] : (val as number);
-    const newSplit = constrainCVSplit(totalDays, targetInit, horizPct, undefined, freq);
+    const newSplit = constrainCVSplit(
+      totalDays,
+      targetInit,
+      horizPct,
+      undefined,
+      freq,
+    );
     setInitPct(newSplit.initialPct);
     setHorizPct(newSplit.horizonPct);
     setPerPct(newSplit.periodPct);
@@ -54,7 +60,13 @@ export function CVConfigDialog({
 
   const handleHorizonChange = (val: number | readonly number[]) => {
     const targetHoriz = Array.isArray(val) ? val[0] : (val as number);
-    const newSplit = constrainCVSplit(totalDays, initPct, targetHoriz, undefined, freq);
+    const newSplit = constrainCVSplit(
+      totalDays,
+      initPct,
+      targetHoriz,
+      undefined,
+      freq,
+    );
     setInitPct(newSplit.initialPct);
     setHorizPct(newSplit.horizonPct);
     setPerPct(newSplit.periodPct);
@@ -62,7 +74,13 @@ export function CVConfigDialog({
 
   const handlePeriodChange = (val: number | readonly number[]) => {
     const targetPer = Array.isArray(val) ? val[0] : (val as number);
-    const newSplit = constrainCVSplit(totalDays, initPct, horizPct, targetPer, freq);
+    const newSplit = constrainCVSplit(
+      totalDays,
+      initPct,
+      horizPct,
+      targetPer,
+      freq,
+    );
     setInitPct(newSplit.initialPct);
     setHorizPct(newSplit.horizonPct);
     setPerPct(newSplit.periodPct);
@@ -141,20 +159,26 @@ export function CVConfigDialog({
               <span className="flex items-center gap-1.5">
                 <span className="size-2.5 rounded-full bg-primary inline-block" />
                 Training:{" "}
-                <strong className="text-foreground">{split.initialLabel || split.initialStr}</strong>{" "}
+                <strong className="text-foreground">
+                  {split.initialLabel || split.initialStr}
+                </strong>{" "}
                 ({(split.initialPct * 100).toFixed(0)}%)
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="size-2.5 rounded-full bg-chart-2 inline-block" />
                 Horizon:{" "}
-                <strong className="text-foreground">{split.horizonLabel || split.horizonStr}</strong>{" "}
+                <strong className="text-foreground">
+                  {split.horizonLabel || split.horizonStr}
+                </strong>{" "}
                 ({(split.horizonPct * 100).toFixed(0)}%)
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="size-2.5 rounded-full bg-muted-foreground/60 inline-block" />
                 Step:{" "}
-                <strong className="text-foreground">{split.periodLabel || split.periodStr}</strong> (
-                {(split.periodPct * 100).toFixed(0)}%)
+                <strong className="text-foreground">
+                  {split.periodLabel || split.periodStr}
+                </strong>{" "}
+                ({(split.periodPct * 100).toFixed(0)}%)
               </span>
             </div>
           </div>
@@ -168,7 +192,8 @@ export function CVConfigDialog({
                   Initial Training Split
                 </FieldLabel>
                 <span className="font-mono text-muted-foreground tabular-nums">
-                  {split.initialLabel || split.initialStr} ({(split.initialPct * 100).toFixed(0)}%)
+                  {split.initialLabel || split.initialStr} (
+                  {(split.initialPct * 100).toFixed(0)}%)
                 </span>
               </div>
               <Slider
@@ -188,7 +213,8 @@ export function CVConfigDialog({
                   Forecast Horizon
                 </FieldLabel>
                 <span className="font-mono text-muted-foreground tabular-nums">
-                  {split.horizonLabel || split.horizonStr} ({(split.horizonPct * 100).toFixed(0)}%)
+                  {split.horizonLabel || split.horizonStr} (
+                  {(split.horizonPct * 100).toFixed(0)}%)
                 </span>
               </div>
               <Slider
@@ -208,7 +234,8 @@ export function CVConfigDialog({
                   Cutoff Step Period
                 </FieldLabel>
                 <span className="font-mono text-muted-foreground tabular-nums">
-                  {split.periodLabel || split.periodStr} ({(split.periodPct * 100).toFixed(0)}%)
+                  {split.periodLabel || split.periodStr} (
+                  {(split.periodPct * 100).toFixed(0)}%)
                 </span>
               </div>
               <Slider
@@ -237,7 +264,11 @@ export function CVConfigDialog({
             onClick={handleConfirm}
             className="text-xs font-bold"
           >
-            <Play aria-hidden="true" data-icon="inline-start" className="fill-current" />
+            <Play
+              aria-hidden="true"
+              data-icon="inline-start"
+              className="fill-current"
+            />
             Run Cross-Validation
           </Button>
         </DialogFooter>

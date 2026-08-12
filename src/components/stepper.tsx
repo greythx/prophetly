@@ -55,7 +55,11 @@ export function Stepper({
                 )}
               >
                 {isCompleted && !isActive ? (
-                  <Check aria-hidden="true" data-icon="inline-start" className="stroke-[3]" />
+                  <Check
+                    aria-hidden="true"
+                    data-icon="inline-start"
+                    className="stroke-[3]"
+                  />
                 ) : (
                   s.number
                 )}

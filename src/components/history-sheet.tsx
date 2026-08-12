@@ -120,7 +120,10 @@ export function HistorySheet({
         <div className="flex-1 overflow-y-auto py-4 space-y-4 pr-1">
           {history.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-64 text-center p-6 border border-dashed rounded-xl bg-muted/20">
-              <History aria-hidden="true" className="size-10 text-muted-foreground/50 mb-3" />
+              <History
+                aria-hidden="true"
+                className="size-10 text-muted-foreground/50 mb-3"
+              />
               <p className="text-sm font-semibold text-foreground">
                 No History Yet
               </p>
@@ -158,7 +161,10 @@ export function HistorySheet({
                       <div className="flex flex-col gap-1">
                         <div className="flex items-center gap-1.5 flex-wrap">
                           <span className="font-bold text-xs text-foreground flex items-center gap-1">
-                            <Database aria-hidden="true" className="size-3.5 text-primary" />
+                            <Database
+                              aria-hidden="true"
+                              className="size-3.5 text-primary"
+                            />
                             {entry.datasetName}
                           </span>
                           <Badge
@@ -304,7 +310,10 @@ export function HistorySheet({
                       onClick={() => handleSelect(entry)}
                       className="w-full text-xs gap-1.5 h-8 font-semibold mt-1"
                     >
-                      <RotateCcw aria-hidden="true" className="size-3.5 text-primary" />
+                      <RotateCcw
+                        aria-hidden="true"
+                        className="size-3.5 text-primary"
+                      />
                       Re-run / Load Config
                     </Button>
                   </CardContent>

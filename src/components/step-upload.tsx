@@ -340,7 +340,10 @@ export function StepUpload({
               variant="secondary"
               className="gap-1 text-[11px] py-0.5 px-2.5 bg-primary/10 text-primary border-primary/20 hover:bg-primary/15"
             >
-              <ShieldCheck aria-hidden="true" className="size-3 text-emerald-500" />
+              <ShieldCheck
+                aria-hidden="true"
+                className="size-3 text-emerald-500"
+              />
               <span>Local Processing — Data never leaves your machine</span>
             </Badge>
           </div>
@@ -383,7 +386,10 @@ export function StepUpload({
             />
             <div className="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform group-hover:scale-110">
               {data.length > 0 ? (
-                <CheckCircle2 aria-hidden="true" className="size-5 text-primary" />
+                <CheckCircle2
+                  aria-hidden="true"
+                  className="size-5 text-primary"
+                />
               ) : (
                 <Upload aria-hidden="true" className="size-5" />
               )}
@@ -430,7 +436,11 @@ export function StepUpload({
                       );
                     }}
                   >
-                    <SelectTrigger id="col-ds" aria-label="Date Column (ds)" className="h-8 text-xs">
+                    <SelectTrigger
+                      id="col-ds"
+                      aria-label="Date Column (ds)"
+                      className="h-8 text-xs"
+                    >
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -465,7 +475,11 @@ export function StepUpload({
                       );
                     }}
                   >
-                    <SelectTrigger id="col-y" aria-label="Value Column (y)" className="h-8 text-xs">
+                    <SelectTrigger
+                      id="col-y"
+                      aria-label="Value Column (y)"
+                      className="h-8 text-xs"
+                    >
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -500,7 +514,11 @@ export function StepUpload({
                       );
                     }}
                   >
-                    <SelectTrigger id="col-cap" aria-label="Capacity Column" className="h-8 text-xs">
+                    <SelectTrigger
+                      id="col-cap"
+                      aria-label="Capacity Column"
+                      className="h-8 text-xs"
+                    >
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -539,7 +557,11 @@ export function StepUpload({
                       );
                     }}
                   >
-                    <SelectTrigger id="col-floor" aria-label="Floor Column" className="h-8 text-xs">
+                    <SelectTrigger
+                      id="col-floor"
+                      aria-label="Floor Column"
+                      className="h-8 text-xs"
+                    >
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -629,7 +651,10 @@ export function StepUpload({
             <div className="flex flex-col gap-3 rounded-xl border bg-card p-4 shadow-sm animate-in fade-in">
               <div className="flex items-center justify-between border-b pb-2">
                 <div className="flex items-center gap-2">
-                  <FileSpreadsheet aria-hidden="true" className="size-4 text-primary" />
+                  <FileSpreadsheet
+                    aria-hidden="true"
+                    className="size-4 text-primary"
+                  />
                   <span className="text-xs font-bold text-foreground">
                     {sampleDataLoaded
                       ? "Airline Passengers Dataset Summary"
@@ -696,7 +721,10 @@ export function StepUpload({
                       variant="default"
                       className="py-2 text-[11px] bg-amber-500/10 border-amber-500/30 text-amber-900 dark:text-amber-200"
                     >
-                      <AlertTriangle aria-hidden="true" className="size-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                      <AlertTriangle
+                        aria-hidden="true"
+                        className="size-3.5 text-amber-600 dark:text-amber-400 shrink-0"
+                      />
                       <AlertDescription>{w}</AlertDescription>
                     </Alert>
                   ))}
@@ -787,7 +815,11 @@ export function StepUpload({
             onClick={handleLoadSample}
             className="flex-1 text-xs"
           >
-            <Sparkles aria-hidden="true" data-icon="inline-start" className="text-amber-500" />
+            <Sparkles
+              aria-hidden="true"
+              data-icon="inline-start"
+              className="text-amber-500"
+            />
             Try Sample Data
           </Button>
 

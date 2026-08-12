@@ -30,7 +30,10 @@ export function calculateTotalDays(data: DataPoint[]): number {
   return Math.max(diffDays, 14);
 }
 
-export function formatDaysWithFreq(days: number, freqCode: string = "D"): string {
+export function formatDaysWithFreq(
+  days: number,
+  freqCode: string = "D",
+): string {
   if (days <= 0) return `${days} days`;
   if (freqCode === "M") {
     const months = Math.round(days / 30.4375);
@@ -54,7 +57,10 @@ export function formatDaysWithFreq(days: number, freqCode: string = "D"): string
   return `${days} days`;
 }
 
-export function formatHorizonLabel(horizonStr: string, freqCode: string = "D"): string {
+export function formatHorizonLabel(
+  horizonStr: string,
+  freqCode: string = "D",
+): string {
   if (!horizonStr) return horizonStr;
   const match = horizonStr.match(/^(\d+(?:\.\d+)?)\s*days?/i);
   if (!match) return horizonStr;
@@ -146,4 +152,3 @@ export function constrainCVSplit(
 }
 
 export const computeCVSplitStrings = constrainCVSplit;
-

@@ -46,7 +46,10 @@ export function LoadingOverlay({
       className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/80 backdrop-blur-md transition-opacity animate-in fade-in duration-200 outline-none"
     >
       <div className="flex flex-col items-center gap-4 rounded-2xl border border-border/60 bg-card p-6 shadow-2xl max-w-sm w-full mx-4 text-center">
-        <Spinner aria-hidden="true" className="size-8 text-primary animate-spin" />
+        <Spinner
+          aria-hidden="true"
+          className="size-8 text-primary animate-spin"
+        />
 
         <div className="flex flex-col gap-1 w-full">
           <Badge
@@ -93,7 +96,10 @@ export function LoadingOverlay({
           variant="secondary"
           className="gap-1.5 text-[11px] py-1 px-3 bg-muted/80 text-muted-foreground border border-border/50"
         >
-          <ShieldCheck aria-hidden="true" className="size-3.5 text-emerald-500" />
+          <ShieldCheck
+            aria-hidden="true"
+            className="size-3.5 text-emerald-500"
+          />
           <span>Processing locally via WebAssembly — 100% Private</span>
         </Badge>
 

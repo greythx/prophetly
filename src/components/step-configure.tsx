@@ -92,7 +92,13 @@ export function StepConfigure({
       cvParams.periodPct ?? 0.2,
       forecastParams.freq,
     );
-  }, [totalDays, cvParams.initialPct, cvParams.horizonPct, cvParams.periodPct, forecastParams.freq]);
+  }, [
+    totalDays,
+    cvParams.initialPct,
+    cvParams.horizonPct,
+    cvParams.periodPct,
+    forecastParams.freq,
+  ]);
 
   useEffect(() => {
     fetchCountryMap()
@@ -109,7 +115,13 @@ export function StepConfigure({
 
   const handleStep2InitialChange = (val: number | readonly number[]) => {
     const num = Array.isArray(val) ? val[0] : (val as number);
-    const updated = constrainCVSplit(totalDays, num, cvSplit.horizonPct, undefined, forecastParams.freq);
+    const updated = constrainCVSplit(
+      totalDays,
+      num,
+      cvSplit.horizonPct,
+      undefined,
+      forecastParams.freq,
+    );
     onCVParamsChange({
       initial: updated.initialStr,
       horizon: updated.horizonStr,
@@ -122,7 +134,13 @@ export function StepConfigure({
 
   const handleStep2HorizonChange = (val: number | readonly number[]) => {
     const num = Array.isArray(val) ? val[0] : (val as number);
-    const updated = constrainCVSplit(totalDays, cvSplit.initialPct, num, undefined, forecastParams.freq);
+    const updated = constrainCVSplit(
+      totalDays,
+      cvSplit.initialPct,
+      num,
+      undefined,
+      forecastParams.freq,
+    );
     onCVParamsChange({
       initial: updated.initialStr,
       horizon: updated.horizonStr,
@@ -191,7 +209,11 @@ export function StepConfigure({
                   className="text-xs font-semibold px-2.5 py-1.5 rounded-lg"
                 >
                   {actionType === "forecast" && (
-                    <Check aria-hidden="true" data-icon="inline-start" className="stroke-[3]" />
+                    <Check
+                      aria-hidden="true"
+                      data-icon="inline-start"
+                      className="stroke-[3]"
+                    />
                   )}
                   Forecast
                 </ToggleGroupItem>
@@ -201,7 +223,11 @@ export function StepConfigure({
                   className="text-xs font-semibold px-2.5 py-1.5 rounded-lg"
                 >
                   {actionType === "cross_validation" && (
-                    <Check aria-hidden="true" data-icon="inline-start" className="stroke-[3]" />
+                    <Check
+                      aria-hidden="true"
+                      data-icon="inline-start"
+                      className="stroke-[3]"
+                    />
                   )}
                   Cross-Validate
                 </ToggleGroupItem>
@@ -229,7 +255,10 @@ export function StepConfigure({
           <div className="flex flex-col gap-2 rounded-xl border bg-muted/20 p-3.5">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
-                <Sparkles aria-hidden="true" className="size-3.5 text-amber-500" />
+                <Sparkles
+                  aria-hidden="true"
+                  className="size-3.5 text-amber-500"
+                />
                 Model Config Presets
               </span>
             </div>
@@ -307,7 +336,10 @@ export function StepConfigure({
                 }}
                 className="flex flex-col items-center justify-center h-auto py-2 px-1 text-xs gap-1 border-border/60 hover:border-primary/50"
               >
-                <Shield aria-hidden="true" className="size-4 text-emerald-500" />
+                <Shield
+                  aria-hidden="true"
+                  className="size-4 text-emerald-500"
+                />
                 <span className="font-bold text-foreground">Conservative</span>
                 <span className="text-[10px] text-muted-foreground font-normal">
                   Tighter priors
@@ -365,7 +397,11 @@ export function StepConfigure({
             onClick={onSubmit}
             className="text-xs font-bold"
           >
-            <Play aria-hidden="true" data-icon="inline-start" className="fill-current" />
+            <Play
+              aria-hidden="true"
+              data-icon="inline-start"
+              className="fill-current"
+            />
             {actionType === "forecast"
               ? "Generate Forecast"
               : actionType === "cross_validation"

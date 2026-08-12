@@ -204,7 +204,10 @@ export function StepResults({
         <Empty className="max-w-md border bg-card/90 shadow-md">
           <EmptyHeader>
             <EmptyMedia variant="icon">
-              <FileQuestion aria-hidden="true" className="size-6 text-muted-foreground" />
+              <FileQuestion
+                aria-hidden="true"
+                className="size-6 text-muted-foreground"
+              />
             </EmptyMedia>
             <EmptyTitle>No Model Results Found</EmptyTitle>
             <EmptyDescription>
@@ -296,7 +299,10 @@ export function StepResults({
                   variant="outline"
                   className="font-mono text-xs gap-1 border-emerald-500/40 text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 tabular-nums"
                 >
-                  <Clock aria-hidden="true" className="size-3.5 text-emerald-500" />
+                  <Clock
+                    aria-hidden="true"
+                    className="size-3.5 text-emerald-500"
+                  />
                   Completed in {(executionTimeMs / 1000).toFixed(2)}s
                 </Badge>
               )}
@@ -360,7 +366,11 @@ export function StepResults({
                 onClick={onRunForecast}
                 className="text-xs h-8 font-semibold text-primary border-primary/40 hover:bg-primary/10"
               >
-                <Play aria-hidden="true" data-icon="inline-start" className="fill-current" />
+                <Play
+                  aria-hidden="true"
+                  data-icon="inline-start"
+                  className="fill-current"
+                />
                 Run Forecast
               </Button>
             )}
@@ -387,7 +397,10 @@ export function StepResults({
                 title="Export model data & metrics to JSON"
                 className="text-xs h-7 px-2 font-semibold"
               >
-                <FileJson aria-hidden="true" className="size-3.5 mr-1 text-blue-500" />
+                <FileJson
+                  aria-hidden="true"
+                  className="size-3.5 mr-1 text-blue-500"
+                />
                 JSON
               </Button>
               <Button
@@ -398,7 +411,10 @@ export function StepResults({
                 title="Download chart image as PNG"
                 className="text-xs h-7 px-2 font-semibold"
               >
-                <FileImage aria-hidden="true" className="size-3.5 mr-1 text-emerald-500" />
+                <FileImage
+                  aria-hidden="true"
+                  className="size-3.5 mr-1 text-emerald-500"
+                />
                 PNG
               </Button>
             </div>
@@ -484,7 +500,10 @@ export function StepResults({
                       onClick={() => setShowChangepoints(!showChangepoints)}
                       className="h-7 text-xs font-semibold gap-1 px-2.5 border-border/60"
                     >
-                      <Calendar aria-hidden="true" className="size-3.5 text-primary" />
+                      <Calendar
+                        aria-hidden="true"
+                        className="size-3.5 text-primary"
+                      />
                       {showChangepoints
                         ? "Hide Changepoints"
                         : "Show Changepoints"}
@@ -714,7 +733,8 @@ export function StepResults({
                   value="mape"
                   className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none px-1 pb-2 text-xs font-semibold gap-1.5"
                 >
-                  <Percent aria-hidden="true" data-icon="inline-start" />% Errors (MAPE & MDAPE)
+                  <Percent aria-hidden="true" data-icon="inline-start" />%
+                  Errors (MAPE & MDAPE)
                 </TabsTrigger>
                 <TabsTrigger
                   value="coverage"
