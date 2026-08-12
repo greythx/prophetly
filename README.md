@@ -14,28 +14,28 @@ Prophetly is a privacy-first time series forecasting app. It runs Facebook Proph
 
 ### Prerequisites
 
-- Node.js (v22.0.0 or newer)
-- npm (v10.0.0 or newer)
+- [Bun](https://bun.sh) (v1.3.0 or newer)
 
 ### Development
 
 1. Install dependencies:
 
    ```bash
-   npm install
+   bun install
    ```
 
 2. Start the local development server:
 
    ```bash
-   npm run dev
+   bun run dev
    ```
 
 3. Open `http://localhost:5173` in your browser.
 
 ## Available scripts
 
-- `npm run dev` — Starts Vite dev server with HMR.
-- `npm run build` — Compiles TypeScript and bundles production assets including WASM binaries.
-- `npm run preview` — Serves the production build locally.
-- `npm run lint` — Runs Biome code checks.
+- `bun run dev` — Starts Vite dev server with HMR.
+- `bun run build` — Compiles TypeScript and bundles production assets including WASM binaries.
+- `bun run preview` — Serves the production build locally.
+- `bun run lint` — Runs Biome code checks.
+- `bun run test` — Runs the Vitest test suite.
