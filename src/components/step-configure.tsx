@@ -19,9 +19,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { fetchCountries, fetchCountryMap } from "@/lib/api";
-
 import { calculateTotalDays, constrainCVSplit } from "@/lib/cv-helper";
+import { fetchCountries, fetchCountryMap } from "@/lib/prophet-client";
 import type { ActionType, CVParams, ForecastParams } from "@/lib/state";
 import type { DataPoint, Holiday, ModelConfig } from "@/lib/types";
 import {

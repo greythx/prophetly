@@ -19,13 +19,13 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ViewTransition } from "@/components/ui/view-transition";
+import { addHistoryEntry, type ForecastHistoryEntry } from "@/lib/history";
 import {
   cancelCrossValidation,
   fetchCrossValidation,
   fetchForecast,
   preloadProphetEngine,
-} from "@/lib/api";
-import { addHistoryEntry, type ForecastHistoryEntry } from "@/lib/history";
+} from "@/lib/prophet-client";
 import {
   type ActionType,
   appReducer,
