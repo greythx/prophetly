@@ -34,8 +34,8 @@ Prophetly is a privacy-first time series forecasting app. It runs Facebook Proph
 
 ## Available scripts
 
-- `bun run dev` — Starts Vite dev server with HMR.
-- `bun run build` — Compiles TypeScript and bundles production assets including WASM binaries.
-- `bun run preview` — Serves the production build locally.
-- `bun run lint` — Runs Biome code checks.
-- `bun run test` — Runs the Vitest test suite.
+- `bun run dev` starts the Vite dev server with HMR.
+- `bun run build` compiles TypeScript and bundles the production assets, including the WASM binaries.
+- `bun run preview` serves the production build locally.
+- `bun run lint` runs Biome checks.
+- `bun run test` runs the Vitest suite.
